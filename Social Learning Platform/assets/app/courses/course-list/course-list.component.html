@@ -1,0 +1,88 @@
+
+<div class="container-fluid search-result-main-div">
+  <div class="container padding-0">
+    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 zero_padding">
+      <div class="col-md-4 col-lg-3 col-sm-5 col-xs-12 padding_three_block">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 small_blocks_rl">
+          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding: 15px 15px 0px;">
+
+            <div class="dropdown" dropdown style="margin-bottom:30px">
+              <button dropdownToggle class="btn filter_dropdown" id="instructor_name" value="" type="button" name="" data-toggle="dropdown" aria-expanded="true">
+                Instructor Name
+                <span class="caret caret_style"></span>
+              </button>
+              <ul *dropdownMenu class="dropdown-menu filter_dropdown_menu" id="list_instructor_type" role="menu" aria-labelledby="instuctor_name">
+                <li class="li_instructor_type" value="" name=""><a href="#" value="">All</a></li>
+                <li class="li_instructor_type" value="" name=""><a href="#" value="">Anish Suri</a></li>
+                <li class="li_instructor_type" value="" name=""><a href="#" value="">Gauri Chavan</a></li>
+                <li class="li_instructor_type" value="" name=""><a href="#" value="">Sanika Bhagat</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown" dropdown style="margin-bottom:30px">
+              <button dropdownToggle class="btn filter_dropdown" id="dropdown_2" value="" name="" type="button" data-toggle="dropdown" aria-expanded="true">
+                Study Material
+                <span class="caret caret_style"></span>
+              </button>
+              <ul *dropdownMenu class="dropdown-menu filter_dropdown_menu" id="list_study_destination" role="menu" aria-labelledby="dropdown_2">
+                <li class="li_dropdown2" value="" name=""><a href="#" value="">All</a></li>
+                <li class="li_dropdown2" value="" name=""><a href="#" value="">Video</a></li>
+                <li class="li_dropdown2" value="" name=""><a href="#" value="">Blogs</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding:0px;margin-bottom:30px">
+              <button type="button" onclick="update_search_results();" style="color: #fff;background-color:rgb(80,227, 194);border-radius: 20px;border: none;font-size: 14px;padding: 8px 15px 8px 15px;" class="btn center-block">Update search Result</button>
+              <p style="float:right;font-size:12px;cursor:pointer;color:#337ab7;margin:0px" onclick="reset_filter();">Reset</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-lg-9 col-sm-7 col-xs-12 padding_three_block_n">
+
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 small_blocks_rl">
+          <p class="col-md-12 col-xs-12 col-sm-12 col-lg-12" style="font-size:15px;color:#787976;margin: 0px;font-weight: 700;border-bottom: 1px solid #eee;padding: 10px 30px;margin: 0px;">Find Study Material <span style="float:right;font-size: 16px;margin-top: 2px;"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span></p>
+
+          <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12"  style="padding:20px 15px 20px">
+
+          <!--  <div class="col-md-9 col-xs-9 col-sm-9 col-lg-9" id="tags_block" style="padding:0px 15px">
+              <span class="filter_tags">Anish<i onclick="filter_close_btn(this);"class="glyphicon glyphicon-remove-circle  close_filter_tags"></i></span>
+              <span class="filter_tags">Video<i onclick="filter_close_btn(this);" class="glyphicon glyphicon-remove-circle  close_filter_tags"></i></span>
+              <span class="filter_tags">HTML<i onclick="filter_close_btn(this);" class="glyphicon glyphicon-remove-circle  close_filter_tags"></i></span>
+            </div>-->
+
+           <!-- <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3" style="padding:0px 15px;">
+              <div class="dropdown" dropdown>
+                <button dropdownToggle class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #aaa;border-radius: 15px;text-align: left;font-weight: 400;width: 100%;background-color: #fff;height: 35px;">
+                  Filter <span class="glyphicon glyphicon-filter" style="float: right;"></span>
+                </button>
+                <ul *dropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width: 100%;">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>-->
+          </div>
+          <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" id="stamp_block">
+    <app-course-item *ngFor="let courseEl of courses; let i = index"
+                     [course]="courseEl"
+                     [index]="i">
+    </app-course-item>
+            <p style="font-size: 20px;color:#787976;font-weight: 700;padding: 10px 30px;margin: 0px 0px 30px;text-align:  center;"  *ngIf="isNull == true">No courses found</p>
+          </div>
+          <div class="loader" style="display:none">
+          <img src="/assets/image/loader.gif" class="center-block">
+        </div>
+
+          <!--  <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12"  style="padding:0px 15px 20px">
+              <button onclick="initial_stamp_load();" type="button" style="color: #fff;background-color:rgb(80,227, 194);border-radius: 20px;border: none;font-size: 14px;padding: 8px 15px 8px 15px;white-space: normal;" class="btn center-block load_more_btn">Load more</button>
+            </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

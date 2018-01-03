@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 padding-0">
+        <tabset type="pills">
+            <tab>
+                <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <p class="text-center" style="font-size: 25px;margin-bottom: 20px;color: #787976;font-weight: 600;">Edit Article</p>
+                    <div class="form-group">
+                        <label for="courseName" class="col-sm-2 control-label">Title</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="courseName" class="form-control" [ngModel]="course?.courseName" name="courseName"
+                                   required  placeholder="Article Title"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="instructorName" class="col-sm-2 control-label">Instructor Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="instructorName" class="form-control" [ngModel]="course?.instructorName" name="instructorName" required placeholder="Instructor Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="description" rows="3" [ngModel]="course?.description" name="description" required placeholder="Article Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagePath" class="col-sm-2 control-label">Image Link</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="imagePath" placeholder="Image URL" type="text" [ngModel]="course?.imagePath" name="imagePath" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-info commonBtnStyle" (click)="onClear(f)">Clear</button>&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-default commonBtn" style="">Save Article</button>
+                        </div>
+                    </div>
+                </form>
+            </tab>
+        </tabset>
+    </div>
+</div>

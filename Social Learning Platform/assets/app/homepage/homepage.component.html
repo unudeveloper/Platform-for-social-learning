@@ -1,0 +1,72 @@
+<div class="container-fluid bgstyle-first" [ngStyle]="{'background-image': 'url(' + photo + ')'}" style="">
+    <div class="col-md-offset-4 col-md-4 col-xs-12 col-sm-12 col-lg-offset-2 col-lg-8" style="">
+        <div class="first_div">
+            <h1 class="first_div_h1">Best Source for Knowledge</h1>
+            <div style="padding: 20px 12% 0px;">
+                <div class="input-group" >
+                    <input [(ngModel)]="queryString" type="text" class="form-control" placeholder="Search for..." style="padding: 25px;border:none">
+                    <span class="input-group-btn">
+                <button  (click) = "search(queryString)" class="btn btn-default" type="button" style="padding: 15px;border: none"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-12 -->
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-bottom: 30px">
+    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+        <h2 class="how-it-work-heading">Our Features</h2>
+        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center">
+            <img src="https://static.pexels.com/photos/590493/pexels-photo-590493.jpeg" class="img-circle img-responsive center-block" style="width: 100px;height: 100px;" alt="Responsive image">
+            <p class="hiw-heading">Access to unlimited courses</p>
+            <p class="hiw-subheading">Choose what you'd like to learn from our extensive course library.</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center">
+            <img src="https://static.pexels.com/photos/583842/pexels-photo-583842.jpeg" class="img-circle img-responsive center-block" style="width: 100px;height: 100px;" alt="Responsive image">
+            <p class="hiw-heading">Learn Anywhere</p>
+            <p class="hiw-subheading">Switch between your computer, tablet, or mobile device.</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center">
+            <img src="https://static.pexels.com/photos/7369/startup-photos.jpg" class="img-circle img-responsive center-block" style="width: 100px;height: 100px;" alt="Responsive image">
+            <p class="hiw-heading">Expert Teachers</p>
+            <p class="hiw-subheading">Learn from expert instructors who are passionate about teaching.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="bgstyle-first" [ngStyle]="{'background-image': 'url(' + photo_1 + ')'}">
+    <div class="container-fluid padding-0">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+            <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12 col-lg-10 col-lg-offset-1 padding-0" style="background-color: #00000061;padding: 30px 20px;margin-top: 50px;margin-bottom: 50px;">
+                <h2 class="how-it-work-heading" style="color:#fff;margin: 0px 0px 20px;">Testimonials</h2>
+                <carousel class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                    <slide>
+                        <div class="carousel-caption text-center">
+                            <img _ngcontent-c1="" alt="Responsive image" class="img-circle img-responsive center-block" src="https://static.pexels.com/photos/220453/pexels-photo-220453.jpeg" style="width: 100px;height: 100px;">
+                            <p _ngcontent-c1="" class="hiw-heading" style="text-align: center;color: #fff;">Raj Phadke</p>
+                            <p _ngcontent-c1="" class="hiw-subheading" style="text-align: center;color: #fff;">I use my MacBook and iPad everyday while I am teaching. I created instructional, engaging videos for my students by using iMovie that I share with them as part of the lesson.</p>
+                        </div>
+                    </slide>
+                    <slide>
+                        <div class="carousel-caption text-center">
+                            <img src="https://static.pexels.com/photos/672489/pexels-photo-672489.jpeg" class="img-circle img-responsive center-block" style="width: 100px;height: 100px;" alt="Responsive image">
+                            <h3>Anish Surti</h3>
+                            <p>As a student in the Professional Development School, I used my MacBook every day. Of course teachers check emails, create documents, but the MacBook was particularly central in my lessons in creative ways as well.</p>
+                        </div>
+                    </slide>
+                    <slide>
+                        <div class="carousel-caption text-center">
+                            <img src="https://static.pexels.com/photos/710737/pexels-photo-710737.jpeg" class="img-circle img-responsive center-block" style="width: 100px;height: 100px;" alt="Responsive image">
+                            <h3>Gauri Chavan</h3>
+                            <p>As a classroom teacher, I use Final Cut Pro to teach Television Studio courses, Adobe Photoshop to create club flyers to track student data and progress. Without my personal laptop, this job would be more difficult.</p>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>
+</div>
+

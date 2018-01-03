@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="container padding-0">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 padding-0">
+            <p class="col-md-12 col-xs-12 col-sm-12 col-lg-12" style="text-align:center;font-size: 25px;margin-bottom: 20px;color: #787976;font-weight: 600;">Articles Listed </p>
+
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 small_blocks_rl padding-0">
+                <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 padding-0" id="stamp_block">
+                    <app-profile *ngFor="let course of courses;  let i = index"
+                                     [course]="course"
+                                 [index] = "i"
+                    >
+                    </app-profile>
+                </div>
+                <div class="loader" style="display:none">
+                    <img src="/assets/image/loader.gif" class="center-block">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

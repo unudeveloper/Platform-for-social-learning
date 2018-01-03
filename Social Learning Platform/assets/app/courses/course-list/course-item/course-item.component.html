@@ -1,0 +1,29 @@
+
+
+        <div class="col-xs-12 col-md-6 col-sm-12 col-lg-4" style="padding: 15px">
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" style="box-shadow: 0 1px 2px rgba(0,0,0,.25);background-color: #FFF;padding: 0px 0px 20px;margin-bottom:15px;">
+                <img src="{{course.imagePath}}" class="col-md-12 col-xs-12 col-sm-12 col-lg-12 padding-0" style="background-size: cover;min-height: 150px">
+                <div style="background-image: linear-gradient(to top,#fff 0,rgba(0,0,0,.0001) 100%);margin-top: -18px;" class="col-md-12">&nbsp;</div>
+                <div class="col-md-12 carousel_block" style="text-align:center;color:#3e3e3e;font-size:19px;font-weight:600;line-height:1.2;padding: 5px 15px;margin-top: -18px;">
+                    {{course.courseName}}
+                </div>
+                <div style="clear: both;font-size: 12px;color: #787976;padding: 5px 15px 0px;">{{ (course.description.length>80)? (course.description | slice:0:80)+'..':(course.description) }}</div>
+
+                <div style="color:#6ca4e8;padding: 5px 15px 10px;clear: both">By <strong>{{course.instructorName}}</strong></div>
+               <!-- <hr style="color:#aaa;margin: 0px 15px;border-width: 2px;clear: both;">-->
+
+                <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" style="padding:0px;">
+                   <!-- <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" style="padding: 10px 15px;">
+                        <i class="fa fa-facebook-official" aria-hidden="true" style="color:rgb(42,95,157);margin: 5px 2px;font-size: 25px;"></i>  <i class="fa fa-twitter-square" style="color:rgb(0,194,245);margin: 5px 2px;font-size: 25px;" aria-hidden="true"></i> <i class="fa fa-linkedin-square" style="color:rgb(1,128,178);margin: 5px 2px;font-size: 25px;" aria-hidden="true"></i><i class="fa fa-google-plus-square" style="color:rgb(221,120,120);margin: 5px 2px;font-size: 25px;" aria-hidden="true"></i>
+                    </div>-->
+                    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                        <a style="cursor: pointer;"
+                           [routerLink]="[index]"
+                           routerLinkActive="active"
+                           type="button" style="color: #fff;background-color:rgb(80,227, 194);border-radius: 20px;border: none;font-size: 14px;padding: 8px 15px 8px 15px;" class="btn center-block">View Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+

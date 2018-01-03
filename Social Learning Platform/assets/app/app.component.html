@@ -1,0 +1,12 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<div class="container text-center" style="padding:30px 0px">
+    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 zero_padding">
+        <span class="footer_link pull-left" [routerLink]="['/homepage']" style="cursor: pointer">&copy; Social Leaning Platform</span>
+        <div class="pull-right">
+            <span class="footer_link" [routerLink]="['/homepage']" style="cursor: pointer">Home</span>
+            <span class="footer_link" [routerLink]="['/courses']" style="cursor: pointer">Course</span>
+        </div>
+    </div>
+</div>
+<app-error></app-error>

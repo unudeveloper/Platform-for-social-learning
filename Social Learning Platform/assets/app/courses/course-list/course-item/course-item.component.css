@@ -1,0 +1,32 @@
+.gradien{background: rgb(245,241,237); /* For browsers that do not support gradients */background: -webkit-linear-gradient(rgb(245,241,237), #fff); /* For Safari 5.1 to 6.0 */background: -o-linear-gradient(rgb(245,241,237), #fff); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(rgb(245,241,237), #fff); /* For Firefox 3.6 to 15 */background: linear-gradient(rgb(245,241,237), #fff); /* Standard syntax */}
+
+.zero_padding{padding:0px}
+.margin_tb{margin: 15px 0px;}
+.margin_lr{margin: 0px 15px;}
+.padding_three_block{padding: 0px 7.5px 0px 15px;}
+.padding_three_block_n{padding: 0px 15px 0px 7.5px;}
+.small_blocks_rl{box-shadow: 0px 15px 4px -8px rgba(0,0,0,.2);background-color: #FFF;padding: 0px;margin-bottom:25px}
+
+
+
+.filter_tags{background-color: #fff;border: 1px solid #bbb;padding: 3px 5px 7px 20px;border-radius: 20px;text-align: center;margin-right: 10px;color: #aaa;min-height: 35px;display: inline-block;margin-bottom: 10px;}
+.close_filter_tags{cursor: pointer;top: -7px;font-size: 20px;z-index: 100;background-color: #fff;left: 10px;color: #bbb;border-radius: 50%;}
+
+
+.btn-primary {color: #fff;background-color: #4090cf;border-color: #3183c4;}
+.btn-primary:hover,.btn-primary:active,.btn-primary.active{color: #fff;background-color: #2c76b0;border-color: #256393;}
+
+
+@media (min-width: 200px ) and (max-width: 768px) {
+    .padding_three_block{padding:0px 15px}
+    .padding_three_block_n{padding:0px 15px}
+}
+
+
+
+
+.search-result-main-div{background-color: #f5faff;padding: 30px 0px; margin:0px }
+
+.caret_style{ position: absolute; right: 10px; top: 20px; border-top: 6px dashed; border-right: 6px solid transparent; border-left: 6px solid transparent;}
+.filter_dropdown{box-shadow: none !important; outline: none !important; width: 100%; background-color: #fff; border: 1px solid rgb(230,231,232); color: rgb(157,159,160) !important; text-align: left; padding: 10px 12px;}
+.filter_dropdown_menu{width: 100%;margin-top: 10px;box-shadow: none;overflow-y: auto;}

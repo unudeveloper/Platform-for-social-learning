@@ -1,0 +1,296 @@
+/* You can add global styles to this file, and also import other style files */
+$bg-white: #ffffff
+$border: none
+$font-weight-700: 700
+$header-color: #6ca4e8
+$grey: #787976
+$inline-block: inline-block
+$zero: 0
+$absolute: absolute
+$none: none
+$left: left
+$right: right
+$block: block
+$center: center
+$lightgrey: rgba(120, 121, 118, 0.64)
+$lightblack: rgba(48, 48, 48, 0.5)
+
+@mixin margin-auto
+  margin-left: auto
+  margin-right: auto
+
+@mixin nav-bar-style
+  color: $header-color
+  font-weight: $font-weight-700
+
+@mixin nav-bar-active
+  background-color: $bg-white
+  color: $grey
+
+@mixin nav-bar-focus
+  background-color: $bg-white
+  color: $header-color
+
+@mixin nav-pills
+  margin-right: 20px
+  margin-bottom: 20px
+  display: $none
+
+.navbar-brand
+  padding: 15px 10px
+
+.navbar-default .navbar-nav
+  .open
+    a
+      background-color: $bg-white
+      font-weight: 400
+
+.navbar-default .navbar-nav
+  .open
+    a:focus
+      color: $bg-white
+      text-decoration: $none
+      background-color: $lightgrey
+
+.navbar-default .navbar-nav
+  .open
+    a:hover
+      color: $bg-white
+      text-decoration: $none
+      background-color: $lightgrey
+
+.navbar-default
+  background-color: $bg-white !important
+  border: $border
+  padding: 5px 0px 0px
+  font-weight: $font-weight-700
+  margin: 0px 0px 5px
+
+.navbar-default .navbar-nav
+  li
+    a
+      @include nav-bar-style
+
+.navbar-default .navbar-brand
+  @include nav-bar-style
+
+.navbar-default .navbar-nav
+  .active
+    a
+      @include nav-bar-active
+
+.navbar-default .navbar-nav
+  .active
+    a:focus
+      @include nav-bar-active
+
+.navbar-default .navbar-nav
+  .active
+    a:hover
+      @include nav-bar-active
+
+.navbar-default .navbar-brand:focus
+  @include nav-bar-focus
+
+.navbar-default .navbar-brand:hover
+  @include nav-bar-focus
+
+.navbar-default .navbar-nav
+  li
+    a:focus
+      @include nav-bar-active
+
+.navbar-default .navbar-nav
+  li
+    a:hover
+      @include nav-bar-active
+
+.navbar-default .navbar-nav
+  li
+    a:focus
+      @include nav-bar-active
+
+.navbar-default .navbar-nav
+  li
+    a:hover
+      @include nav-bar-active
+
+.caret
+  display: $inline-block
+  width: $zero
+  height: $zero
+  margin-left: 5px
+  vertical-align: middle
+  border-top: 6px dashed
+  border-top: 4px solid
+  border-right: 6px solid transparent
+  border-left: 6px solid transparent
+  margin-top: -3px
+
+.dropdown-menu
+  position: $absolute
+  top: 100%
+  left: $zero
+  z-index: 1000
+  display: $none
+  float: $left
+  min-width: 160px
+  padding: 0px
+  margin: 2px 0 0
+  font-size: 14px
+  text-align: $left
+  list-style: $none
+  background-clip: padding-box
+  background-color: #f3f3f3
+  border: $none !important
+  border-radius: 0px
+  box-shadow: $none
+
+
+.dropdown-menu
+  li
+    a:focus
+      color: $bg-white
+      text-decoration: $none
+      background-color: $lightgrey
+
+.dropdown-menu
+  li
+    a:hover
+      color: $bg-white
+      text-decoration: $none
+      background-color: $lightgrey
+
+.dropdown-menu
+  li
+    a
+      display: $block
+      padding: 10px 20px
+      clear: both
+      font-weight: 400
+      line-height: 1.42857143
+      color: $grey
+      white-space: nowrap
+
+.facebook_btn
+  color: #4267b2 !important
+  padding-left: 5px
+
+.dropdown-menu
+  li
+    a:focus
+      color: $bg-white !important
+
+.dropdown-menu
+  li
+    a:hover
+      .facebook_btn
+        color: $bg-white !important
+
+.padding-0
+  padding: 0px
+
+.body-style
+  font-family: 'Nunito Sans', sans-serif
+
+.first_div_h1
+  font-size: 50px
+  text-align: $center
+  color: $bg-white
+  font-weight: 200
+
+.first_div
+  margin: 10% 0px
+  padding: 10% 20px
+  background-color: $lightblack
+
+.carousel-control.left
+  background-image: $none
+
+.carousel-control.right
+  background-image: $none
+
+.search-result-main-div
+  background-color: #f5faff
+  padding: 30px 0px
+  margin: 0px
+
+.nav-pills
+  li
+    .active
+      a
+        @include nav-pills
+
+.nav-pills
+  li
+    a
+      @include nav-pills
+
+.nav-pills
+  li
+    .active
+      a:focus
+        @include nav-pills
+
+.nav-pills
+  li
+    .active
+      a:hover
+        @include nav-pills
+
+.tab-content
+  .active
+    box-shadow: 0px 15px 4px -8px rgba(0,0,0,.2)
+    background-color: $bg-white
+    padding: 20px
+    margin-bottom: 25px
+
+.form-control
+  border: 1px solid rgb(230,231,232)
+  color: rgb(157,159,160) !important
+  box-shadow: $none
+
+.commonBtn
+  color: #fff !important
+  background-color: rgb(80,227, 194) !important
+  border-radius: 20px
+  border: $none
+  font-size: 14px
+  padding: 8px 15px 8px 15px
+
+.commonBtnStyle
+  border-radius: 20px
+  border: $none
+  font-size: 14px
+  padding: 8px 15px 8px 15px
+
+.hiw-heading
+  font-weight: 600
+  font-size: 18px
+  padding-top: 15px
+  color: $grey
+
+.how-it-work-heading
+  font-size: 25px
+  text-align: $center
+  padding: 10px 15px
+  color: #6ca4e8
+
+.hiw-subheading
+  color: #808080
+
+.footer_link
+  padding: 0px
+  color: $grey
+  font-weight: 600
+  padding: 0px 5px
+
+.label
+  color: #787976
+
+.bgstyle-first
+  padding: 0px
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-position: $center
+  background-size: cover

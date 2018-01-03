@@ -1,0 +1,22 @@
+<div class="container-fluid bgstyle-first search-result-main-div" [ngStyle]="{'background-image': 'url(' + photo + ')'}">
+  <div class="course-name-div">
+    <div class="container padding-container">
+      <h1 class="font-size-50">{{course.courseName}}</h1>
+    </div>
+  </div>
+</div>
+<div class="container-fluid search-result-main-div">
+  <div class="container">
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 padding-0">
+      <img src="/assets/image/profile_pic.png" class="img-circle col-lg-3 col-md-3 col-sm-3 col-xs-3 profile-img">
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 user_name_joined_date">
+        <p> {{course.instructorName}} <!--<span class="date-time">12-12-2017 12:00:00</span></p>-->
+      </div>
+    </div>
+    <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 padding-0">
+      <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 description-style">
+        <p>{{course.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

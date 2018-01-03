@@ -1,0 +1,232 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar-brand{
+  padding: 15px 10px; }
+
+.navbar-default .navbar-nav .open a {
+  background-color: #ffffff;
+  font-weight: 400; }
+
+.navbar-default .navbar-nav .open a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(120, 121, 118, 0.64); }
+
+.navbar-default .navbar-nav .open a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(120, 121, 118, 0.64); }
+
+.navbar-default {
+  background-color: #ffffff !important;
+  border: none;
+  padding: 5px 0px 0px;
+  font-weight: 700;
+  margin: 0px 0px 5px; }
+
+.navbar-default .navbar-nav li a {
+  color: #6ca4e8;
+  font-weight: 700; }
+
+.navbar-default .navbar-brand {
+  color: #6ca4e8;
+  font-weight: 700; }
+
+.navbar-default .navbar-nav .active a {
+  background-color: #ffffff;
+  color: #787976; }
+
+.navbar-default .navbar-nav .active a:focus {
+  background-color: #ffffff;
+  color: #787976; }
+
+.navbar-default .navbar-nav .active a:hover {
+  background-color: #ffffff;
+  color: #787976; }
+
+.navbar-default .navbar-brand:focus {
+  background-color: #ffffff;
+  color: #6ca4e8; }
+
+.navbar-default .navbar-brand:hover {
+  background-color: #ffffff;
+  color: #6ca4e8; }
+
+.navbar-default .navbar-nav li a:focus {
+  background-color: #ffffff;
+  color: #787976; }
+
+.navbar-default .navbar-nav li a:hover {
+  background-color: #ffffff;
+  color: #787976; }
+
+.navbar-default .navbar-nav li a:focus {
+  background-color: #ffffff;
+  color: #787976; }
+
+.navbar-default .navbar-nav li a:hover {
+  background-color: #ffffff;
+  color: #787976; }
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-top: 6px dashed;
+  border-top: 4px solid;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  margin-top: -3px; }
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 0px;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  background-color: #f3f3f3;
+  border: none !important;
+  border-radius: 0px;
+  box-shadow: none; }
+
+.dropdown-menu li a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(120, 121, 118, 0.64); }
+
+.dropdown-menu li a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(120, 121, 118, 0.64); }
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #787976;
+  white-space: nowrap; }
+
+.facebook_btn {
+  color: #4267b2 !important;
+  padding-left: 5px; }
+
+.dropdown-menu li a:focus {
+  color: #ffffff !important; }
+
+.dropdown-menu li a:hover .facebook_btn {
+  color: #ffffff !important; }
+
+.padding-0 {
+  padding: 0px; }
+
+.body-style {
+  font-family: 'Nunito Sans', sans-serif; }
+
+.first_div_h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 200; }
+
+.first_div {
+  margin: 10% 0px;
+  padding: 10% 20px;
+  background-color: rgba(48, 48, 48, 0.5); }
+
+.carousel-control.left {
+  background-image: none; }
+
+.carousel-control.right {
+  background-image: none; }
+
+.search-result-main-div {
+  background-color: #f5faff;
+  padding: 30px 0px;
+  margin: 0px; }
+
+.nav-pills li .active a {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: none; }
+
+.nav-pills li a {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: none; }
+
+.nav-pills li .active a:focus {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: none; }
+
+.nav-pills li .active a:hover {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: none; }
+
+.tab-content .active {
+  box-shadow: 0px 15px 4px -8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px; }
+
+.form-control {
+  border: 1px solid #e6e7e8;
+  color: #9d9fa0 !important;
+  box-shadow: none; }
+
+.commonBtn {
+  color: #fff !important;
+  background-color: #50e3c2 !important;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  padding: 8px 15px 8px 15px; }
+
+.commonBtnStyle {
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  padding: 8px 15px 8px 15px; }
+
+.hiw-heading {
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 15px;
+  color: #787976; }
+
+.how-it-work-heading {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 15px;
+  color: #6ca4e8; }
+
+.hiw-subheading {
+  color: #808080; }
+
+.footer_link {
+  padding: 0px;
+  color: #787976;
+  font-weight: 600;
+  padding: 0px 5px; }
+
+.label {
+  color: #787976; }
+
+.bgstyle-first {
+  padding: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }

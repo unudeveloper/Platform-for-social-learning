@@ -1,0 +1,103 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div routerLinkActive="active" class="navbar-header">
+            <button (click)="toggleState()" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/homepage']"> <i class="fa fa-graduation-cap"></i> Social Learning Platform </a>
+        </div>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active"><a (click)="toggleState()" [routerLink]="['/homepage']">Home <span class="sr-only">(current)</span></a></li>
+                <li class="dropdown" dropdown>
+                <li routerLinkActive="active"><a (click)="toggleState()" [routerLink]="['/courses']">Courses</a></li>
+                <li *ngIf="isLoggedIn()" routerLinkActive="active"><a (click)="toggleState()"  [routerLink]="['/create-content']">Create Content</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <ng-template [ngIf]="!isLoggedIn()">
+                    <li routerLinkActive="active"><a style="cursor: pointer" (click)="openModal(login)">Login</a></li>
+                    <li routerLinkActive="active"><a style="cursor: pointer" (click)="openModal2(signup)">Sign Up</a></li>
+                </ng-template>
+
+                <li *ngIf="isLoggedIn()"  class="dropdown xs_sm_visible loginuserdropdown" style="min-height: 50px;" dropdown >
+                    <div dropdownToggle href="javascript:void(0)" class="dropdown-toggle" style="padding: 3px 15px 2px 7px !important;" role="button" data-toggle="dropdown" id="user_info" aria-haspopup="true" aria-expanded="false">
+                        <img src="/assets/image/profile_pic.png" class="img-circle col-lg-3 col-md-3 col-sm-3 col-xs-3" style="width:45px;height:45px;border:2px solid #50E3C2;margin-right: 3px;padding: 0px;">
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 user_name_joined_date" style="padding: 13px 0px 0px;width: auto;font-size: 16px;font-weight: 400;">
+                            <p>User name</p>
+                        </div>
+                        <span class="glyphicon glyphicon-triangle-bottom" style="top: 16px;left: 5px;font-size: 16px;margin:0px !important"></span>
+                    </div>
+                    <ul class="dropdown-menu menu_user_info" aria-labelledby="user_info" *dropdownMenu>
+                        <li><a (click)="toggleState()"  style="cursor: pointer;" [routerLink]="['/profile']"><i class="fa fa-street-view fa-lg"></i>&nbsp;My Profile</a></li>
+                        <li><a (click)="toggleState()"  style="cursor: pointer;" (click)="onLogout()"><i class="fa fa-sign-out fa-lg"></i>&nbsp;Logout</a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<ng-template #login>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">  <a class="navbar-brand"  href="#" style="color: #6ca4e8;font-weight: 700;padding: 10px 0px 0px;height: auto;"> <i class="fa fa-graduation-cap"></i> Social Learning Platform </a></h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="modal-body">
+            <!--<app-login></app-login>-->
+            <form [formGroup]="myForm1" (ngSubmit)="onSubmitLogin()">
+                <div class="form-group">
+                    <label for="email">Mail</label>
+                    <input type="email" id="email" class="form-control" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                </div>
+                <button (click) = "modalRef.hide()" class="btn btn-primary commonBtn" type="submit" [disabled]="!myForm1.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #signup>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">  <a class="navbar-brand" href="#" style="color: #6ca4e8;font-weight: 700;padding: 10px 0px 0px;height: auto;"> <i class="fa fa-graduation-cap"></i> Social Learning Platform </a></h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="modal-body">
+            <form [formGroup]="myForm2" (ngSubmit)="onSubmitSignUp()">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control" formControlName="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-control" formControlName="lastName">
+                </div>
+                <div class="form-group">
+                    <label for="email">Mail</label>
+                    <input type="email" id="email" class="form-control" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                </div>
+                <!-- <button  (click)="modalRef.hide()" class="btn btn-primary commonBtn" type="submit" [disabled]="!myForm2.valid">Submit</button>-->
+                <button  (click)="openModal(login)" class="btn btn-primary commonBtn" type="submit" [disabled]="!myForm2.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</ng-template>
